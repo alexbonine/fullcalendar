@@ -784,6 +784,7 @@ Grid.mixin({
 				return this.view.formatRange(range, formatStr);
 			}
 			else {
+				range.start = FC.moment.parseZone(range.start);
 				return range.start.format(formatStr);
 			}
 		}
